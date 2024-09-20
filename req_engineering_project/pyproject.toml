@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "req_engineering_project"
+version = "0.1.0"
+description = "req_engineering_project using crewAI"
+authors = ["Aboze Brain John"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.55.2,<1.0.0" }
+streamlit = "^1.38.0"
+llama-index = "^0.11.10"
+llama-index-vector-stores-chroma = "^0.2.0"
+composio-crewai = "^0.5.23"
+arxiv = "^2.1.3"
+pandas = "^2.2.2"
+langtrace-python-sdk = "^2.3.20"
+
+
+[tool.poetry.scripts]
+req_engineering_project = "req_engineering_project.main:run"
+run_crew = "req_engineering_project.main:run"
+train = "req_engineering_project.main:train"
+replay = "req_engineering_project.main:replay"
+test = "req_engineering_project.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
