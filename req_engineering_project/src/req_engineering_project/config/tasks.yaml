@@ -1,0 +1,119 @@
+meeting_analysis_task:
+  description: >
+    Thoroughly analyze the meeting notes using the provided tools to identify and extract key project requirements, objectives, and stakeholder needs.
+    Summarize the critical insights to establish a clear and thorough understanding of the project scope, ensuring all vital aspects are captured for subsequent phases. 
+    Document the analysis in a structured, professional format adhering to industry best practices.
+  expected_output: >
+    Produce a detailed document titled 'Preliminary Meeting Notes Analysis' that includes the following sections:
+      1. Initial Project Requirements
+        - An in-depth analysis of the primary project requirements identified from the meeting notes, extracted using sophisticated analytical tools.
+      2. Project Objectives
+        - Clearly defined and articulated project objectives outlining the goals and expected outcomes, derived from meticulous examination of the notes.
+      3. Stakeholder Needs and Expectations
+        - Comprehensive documentation of stakeholder needs, expectations, specific concerns, and priorities as identified through the analysis.
+      4. Additional Relevant Information
+        - Any other pertinent insights extracted from the meeting notes that may impact the project, ensuring no critical detail is overlooked.
+    This document will serve as the foundational basis for all subsequent project phases, ensuring that every critical aspect is meticulously captured and clearly articulated.
+  agent: meeting_analyst
+
+research_task:
+  description: >
+    Conduct and Develop an in-depth technical, market, and competitive research based on the insights from the "Preliminary Meeting Notes Analysis". 
+    Gather and critically analyze relevant academic research, market data, and industry reports. 
+    Examine the competitive landscape in depth and identify current and emerging technological trends. 
+    Develop detailed profiles of target customer segments and personas to enhance understanding of end-users. 
+    Evaluate the project's Strengths, Weaknesses, Opportunities, and Threats (SWOT) in a tabular form.
+    This comprehensive research will inform strategic decision-making and highlight potential opportunities and threats within the market.
+  expected_output: >
+    Produce a comprehensive document titled "In-Depth Market and Technical Research" encompassing the following sections:
+      1. Market Analysis:
+        - Detailed insights into the market size, growth potential, and key market segments.
+        - Analysis of consumer behavior and preferences relevant to the project.
+      2. Competitor Analysis:
+        - In-depth evaluation of direct and indirect competitors, including their strengths, weaknesses, market positioning, and strategies.
+        - Identification of competitors' key products or services and their market share.
+      3. Technological Trends:
+        - Overview of current and emerging technologies that could impact the project.
+        - Analysis of technology adoption trends, innovation drivers, and potential technological disruptions.
+      4. Customer Segmentation and Personas:
+        - Develop detailed profiles of target customer segments and personas, including demographic, psychographic, and behavioral characteristics.
+      5. SWOT Analysis:
+        - Evaluate the project's Strengths, Weaknesses, Opportunities, and Threats in a tabular form, covering regulatory, economic, and technological factors.
+        - Recommendations on how to leverage opportunities and mitigate threats.
+    Ensure each section provides a thorough and insightful analysis, supported by the latest (2024) data and industry findings.
+  agent: researcher
+  context:
+    - meeting_analysis_task
+
+requirements_development_task:
+  description: >
+    Develop comprehensive and detailed functional and non-functional requirements based on the synthesized insights from the "Preliminary Meeting Notes Analysis" and the "In-Depth Market and Technical Research". 
+    Document these requirements in a clear, structured format that aligns with industry standards, ensuring they are actionable and traceable throughout the project lifecycle.
+    Additionally, rank the requirements based on their importance and urgency to assist in effective resource allocation and scheduling, ensuring that critical requirements are addressed first.
+  expected_output: >
+    Produce a detailed document titled "Draft Business Requirements Document (BRD)" that includes:
+      1. Detailed Functional Requirements:
+        - Specific features and functionalities required for the project.
+      2. Detailed Non-Functional Requirements:
+        - Specifications related to performance, security, usability, scalability, and other quality attributes. 
+      3. Requirements Prioritization
+        - Rank all functional and non-functional requirements based on their importance and urgency (e.g., Must-Have, Should-Have, Could-Have, Won't-Have).
+        - Present the prioritization in a clear and organized format, such as a table or matrix.
+        - Provide justification for the prioritization to facilitate stakeholder understanding and agreement.
+    This document should articulate all project requirements clearly and comprehensively, providing a solid foundation for the design and development phases. 
+    The inclusion of prioritized requirements will help focus efforts on the most critical aspects of the project and facilitate effective planning.
+  agent: requirements_developer
+  context:
+    - meeting_analysis_task
+    - research_task
+
+compliance_analysis_task:
+  description: >
+    Perform a comprehensive compliance analysis on the Business Requirements Document (BRD) draft obtained from the requirements development task to ensure all findings comply with GDPR regulations. 
+    Conduct a Data Protection Impact Assessment (DPIA) specifically for the requirements outlined in the BRD draft and develop a robust compliance strategy. 
+    Document all necessary compliance measures to safeguard data privacy and security, ensuring the project's adherence to GDPR standards.
+  expected_output: >
+    Develop a detailed document titled 'Compliance Report' that contains the following section: 
+      1. Compliance Analysis: Assessment of the BRD draft to ensure alignment with GDPR regulations. 
+      2. DPIA Report: Comprehensive Data Protection Impact Assessment detailing potential data privacy risks and mitigation strategies for the requirements specified in the BRD draft. 
+      3. Compliance Strategy: A well-defined compliance strategy outlining the measures and procedures to ensure ongoing GDPR compliance for the project. 
+    This report should ensure the project meets all GDPR standards and maintains robust data privacy and security protocols.
+  agent: compliance_specialist
+  context:
+    - requirements_development_task
+
+quality_assurance_task:
+  description: >
+    Conduct a meticulous review of the "Draft Business Requirements Document (BRD)" from the requirements_development_task to ensure its completeness, accuracy, and alignment with both the compliance strategy outlined in the compliance_analysis_task and industry best practices. 
+    Enhance and finalize the document by:
+      - Incorporating comprehensive functional and non-functional requirements.
+      - Including detailed user stories with acceptance criteria.
+      - Ensuring adherence to best practices in business analysis and software engineering.
+      - Adding a thorough project summary that encapsulates key elements and findings.
+      - Incorporating a Risk Management Plan to identify and mitigate potential risks uncovered during the quality assurance process.
+    Ensure the BRD aligns with GDPR compliance guidelines to maintain data privacy and security protocols throughout the project lifecycle. 
+    The finalized document should meet the highest quality standards and be fully prepared for the next stages of the project.
+  expected_output: >
+    Produce a finalized document titled "Final Business Requirements Document (BRD)" that contains the following sections:
+      1. Project Summary:
+        - A comprehensive summary of the project, including objectives, scope, and key findings.
+      2. Stakeholder Analysis:
+        - Identify and analyze the stakeholders involved in the project, their roles, and their impact.
+      3. Comprehensive Functional and Non-Functional Requirements:
+        - Detailed descriptions of all functional and non-functional requirements, presented in a clear and organized tabular format.
+        - Ensure each requirement is clear, succinct, complete, testable, and aligned with project objectives.
+        - Include data privacy and security requirements to comply with GDPR guidelines.
+        - Present the Requirements Prioritization, ranking all requirements based on their importance and urgency (e.g., Must-Have, Should-Have, Could-Have, Won't-Have).
+        - Provide justification for the prioritization to facilitate stakeholder understanding and agreement.
+      4. Detailed User Stories and Acceptance Criteria:
+        - Thoroughly defined user stories that capture the end-users' needs and expected outcomes.
+        - Use the format: "As a [user], I want [feature] so that [benefit]."
+        - Include clear acceptance criteria for each user story to guide development and testing.
+      5. Risk Management Plan (Tabular format)
+        - List all potential risks, including technical, legal, operational, compliance, and project management risks.
+        - Propose specific actions to prevent or minimize each risk.    
+    The finalized BRD should ensure the project is fully prepared for the next stages of BRD refinement or product development.
+  agent: compliance_specialist
+  context:
+    - requirements_development_task
+    - compliance_analysis_task
