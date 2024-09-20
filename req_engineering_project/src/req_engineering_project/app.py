@@ -7,7 +7,7 @@ from req_engineering_project.utils import StreamToExpander
 from langtrace_python_sdk import langtrace
 
 # Update your langtrace API key
-LANGTRACE_API_KEY = "c0b3d150cf93be8f6424e87a401a92c7e5399fb4852b727d618bd45193b2a392"
+LANGTRACE_API_KEY = "xxxx"
 
 
 
