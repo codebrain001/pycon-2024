@@ -7,9 +7,7 @@ from req_engineering_project.utils import StreamToExpander
 from langtrace_python_sdk import langtrace
 
 # Update your langtrace API key
-LANGTRACE_API_KEY = "xxxx"
-
-
+LANGTRACE_API_KEY = "your-langtrace-api-key"
 
 def setup_page():
     """
@@ -73,14 +71,15 @@ def upload_meeting_notes():
 
 def run_agentic_workflow(model_name, api_key):
     try:
+        st.info('The agentic workflow will start after the uploaded document is indexed in the vector store.',  icon="1️⃣")
         with st.status("🤖 **Agents at work...**", state="running", expanded=True) as status:
-                with st.container(height=500, border=False):
-                    sys.stdout = StreamToExpander(st)
-                    ReqEngineeringProjectCrew(model_name, api_key).crew().kickoff()
-                status.update(label="✅ Requirement Analysis and Specification Successful!", state="complete", expanded=False)
-                st.subheader('View Agentic Workflow Outputs', anchor=False, divider="rainbow")
-                st.info("This section allows you to view the outputs of the agentic workflow. Click the link below to access the Output Viewer Page.")
-                st.page_link("pages/1_outputs_viewer.py", label="Output Viewer", icon="1️⃣")
+            with st.container(height=500, border=False):
+                sys.stdout = StreamToExpander(st)
+                ReqEngineeringProjectCrew(model_name, api_key).crew().kickoff()
+            status.update(label="✅ Requirement Analysis and Specification Successful!", state="complete", expanded=False)
+        st.subheader('View Agentic Workflow Outputs', anchor=False, divider="rainbow")
+        st.info("This section allows you to view the outputs of the agentic workflow. Click the link below to access the Output Viewer Page.")
+        st.page_link("pages/1_outputs_viewer.py", label="Output Viewer", icon="1️⃣")
     except Exception as e:
         st.error(f'Failed to run agents. Reason: {e}')
     
