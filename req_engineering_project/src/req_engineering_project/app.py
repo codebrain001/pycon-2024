@@ -52,6 +52,15 @@ def sidebar_config(disabled):
     return selected_llm, api_key, run_agents_button
 
 def upload_meeting_notes():
+    """
+    Handles the upload of meeting files (doc, docx, txt, pdf, mp4, mp3) and saves them to a specified directory.
+
+    Args:
+        None
+
+    Returns:
+        list: A list of uploaded file objects.
+    """
     st.info("Upload meeting or meeting notes", icon="ℹ️")
     uploaded_files = st.file_uploader(
         "Choose documents",
@@ -70,6 +79,16 @@ def upload_meeting_notes():
     return uploaded_files
 
 def run_agentic_workflow(model_name, api_key):
+    """
+    Runs the agentic workflow for requirement analysis and specification.
+
+    Args:
+        model_name (str): The name of the LLM model to use for the workflow.
+        api_key (str): The API key required for authenticating the model's usage.
+
+    Returns:
+        None
+    """
     try:
         st.info('The agentic workflow will start after the uploaded document is indexed in the vector store.',  icon="1️⃣")
         with st.status("🤖 **Agents at work...**", state="running", expanded=True) as status:
@@ -94,6 +113,15 @@ def run_agentic_workflow(model_name, api_key):
         st.toast("Uploaded document(s) removed from App.")
 
 def main():
+    """
+    Main function for running the multi-agent requirement analysis and specification tool.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     setup_page()
     # Setting Langtrace for observability and evaluations
     langtrace.init(api_key=LANGTRACE_API_KEY)
