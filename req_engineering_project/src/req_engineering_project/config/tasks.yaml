@@ -18,7 +18,7 @@ meeting_analysis_task:
 
 research_task:
   description: >
-    Conduct and Develop an in-depth technical, market, and competitive research based on the insights from the "Preliminary Meeting Notes Analysis". 
+    Conduct and develop an in-depth technical, market, and competitive research based on the insights from the "Preliminary Meeting Notes Analysis". 
     Gather and critically analyze relevant academic research, market data, and industry reports. 
     Examine the competitive landscape in depth and identify current and emerging technological trends. 
     Develop detailed profiles of target customer segments and personas to enhance understanding of end-users. 
@@ -94,15 +94,14 @@ quality_assurance_task:
     Ensure the BRD aligns with GDPR compliance guidelines to maintain data privacy and security protocols throughout the project lifecycle. 
     The finalized document should meet the highest quality standards and be fully prepared for the next stages of the project.
   expected_output: >
-    Produce a finalized document titled "Final Business Requirements Document (BRD)" that contains the following sections:
-      1. Project Summary:
-        - A comprehensive summary of the project, including objectives, scope, and key findings.
-      2. Stakeholder Analysis:
-        - Identify and analyze the stakeholders involved in the project, their roles, and their impact.
+    Rewriting and improving a Business Requirements Document (BRD) draft. 
+    Ensure it is more succinct, clear, and well-structured while maintaining all essential information, containing the following aections:
+      1. Project Summary
+      2. Stakeholder Analysis
       3. Comprehensive Functional and Non-Functional Requirements:
         - Detailed descriptions of all functional and non-functional requirements, presented in a clear and organized tabular format.
         - Ensure each requirement is clear, succinct, complete, testable, and aligned with project objectives.
-        - Include data privacy and security requirements to comply with GDPR guidelines.
+        - Ensure the requrirements are compliant with GDPR regulations. 
         - Present the Requirements Prioritization, ranking all requirements based on their importance and urgency (e.g., Must-Have, Should-Have, Could-Have, Won't-Have).
         - Provide justification for the prioritization to facilitate stakeholder understanding and agreement.
       4. Detailed User Stories and Acceptance Criteria:
@@ -112,8 +111,11 @@ quality_assurance_task:
       5. Risk Management Plan (Tabular format)
         - List all potential risks, including technical, legal, operational, compliance, and project management risks.
         - Propose specific actions to prevent or minimize each risk.    
-    The finalized BRD should ensure the project is fully prepared for the next stages of BRD refinement or product development.
+    Ensure the overall document is cohesive, well-structured, and ready for the next stages of refinement or development
   agent: compliance_specialist
   context:
     - requirements_development_task
     - compliance_analysis_task
+
+
+  
