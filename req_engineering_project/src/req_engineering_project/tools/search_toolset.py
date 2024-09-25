@@ -8,8 +8,8 @@ from langchain_community.utilities import ArxivAPIWrapper
 
 # Update with your API keys
 # Load environment variables
-os.environ["SERPER_API_KEY"] = "xxxx"
-os.environ["COMPOSIO_API_KEY"] = "xxxx"
+os.environ["SERPER_API_KEY"] = "your-serper-api-key"
+os.environ["COMPOSIO_API_KEY"] = "your-composio-api-key"
 
 from composio_crewai import Action, ComposioToolSet
 composio_toolset = ComposioToolSet()
