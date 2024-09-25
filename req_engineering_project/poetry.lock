@@ -2978,13 +2978,13 @@ requests = ">=2,<3"
 
 [[package]]
 name = "langtrace-python-sdk"
-version = "2.3.20"
+version = "2.3.21"
 description = "Python SDK for LangTrace"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "langtrace_python_sdk-2.3.20-py3-none-any.whl", hash = "sha256:93fa7ba8b594be0107e542dfaafd1f0a51d11c8e83f880ef6b092586701d8497"},
-    {file = "langtrace_python_sdk-2.3.20.tar.gz", hash = "sha256:74ee2c1993d53991b3a4c4e7495a2e1baa8fc64056a4a70e9a959801f5ef6695"},
+    {file = "langtrace_python_sdk-2.3.21-py3-none-any.whl", hash = "sha256:b7e7547ac16f2f3c8af3c734adea0828722344b212d0ade131aea654ea1ff666"},
+    {file = "langtrace_python_sdk-2.3.21.tar.gz", hash = "sha256:c9cab126507e08017c697cc4df0dd3d86212554789ac292f3cae77d50cee7e19"},
 ]
 
 [package.dependencies]
