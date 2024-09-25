@@ -58,7 +58,7 @@ class ReqEngineeringProjectCrew():
 			config=self.agents_config['researcher'],
 			verbose=True,
 			llm=self.model_name,
-			tools=[self.google_search_tool, self.arxiv_search_tool, self.perplexity_ai_search_tool, self.arxiv_search_tool]
+			tools=[self.google_search_tool, self.arxiv_search_tool, self.perplexity_ai_search_tool, self.website_search_tool]
 		)
 	
 	@agent
@@ -135,6 +135,6 @@ class ReqEngineeringProjectCrew():
 			# Process=Process.hierarchical,
 			# manager_llm='gpt-4o',
 			# # Add plaaning feature
-			# planning=True,
-			# planning_llm='gpt-4o',
+			planning=True,
+			planning_llm=self.model_name
 		)
