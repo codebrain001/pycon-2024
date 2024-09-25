@@ -36,12 +36,13 @@ class StreamToExpander:
 
         # Apply emojis and formatting using adjusted patterns
         replacements = {
-            r'^\s*#*\s*Agent:\s*(.*)': r'### 🔹 Agent: \1',
-            r'^\s*#*\s*Task:\s*(.*)': r'#### 📝 Task: \1',
-            r'^\s*#*\s*Thought:\s*(.*)': r'##### 🤖 Thought: \1',
-            r'^\s*#*\s*Using tool:\s*(.*)': r'##### 🛠️ Using tool: \1',
-            r'^\s*#*\s*Tool Input:\s*(.*)': r'##### 📥 Tool Input: \1',
-            r'^\s*#*\s*Tool Output:\s*(.*)': r'##### 📊 Tool Output: \1',
+            r'^\s*#*\s*Agent:\s*(.*)': r'# 🔹 Agent: \1',
+            r'^\s*#*\s*Task:\s*(.*)': r'## 📝 Task: \1',
+            r'^\s*#*\s*Thought:\s*(.*)': r'## 🤖 Thought: \1',
+            r'^\s*#*\s*Using tool:\s*(.*)': r'#### 🛠️ Using tool: \1',
+            r'^\s*#*\s*Tool Input:\s*(.*)': r'#### 📥 Tool Input: \1',
+            r'^\s*#*\s*Tool Output:\s*(.*)': r'#### 📊 Tool Output: \1',
+            r'^\s*#*\s*Final Answer:\s*(.*)': r'#### 💬 Final Answer \1',
         }
 
         for pattern, replacement in replacements.items():
