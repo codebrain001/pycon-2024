@@ -2,8 +2,7 @@
 
 
 ## Prerequisites
-- Python 3.10 or greater
-    - Download: python.org/downloads
+- Python 3.10 or greater [Download Python](python.org/downloads)
 
 ## Clone the Repository
 Clone the repository to a directory of your choosing:
@@ -34,7 +33,7 @@ Get the following API keys for the project:
 
 #### 2. Serper Dev API Key
 - For Google search functionality (first 2,500 search queries are free).
-- Get your API key: [Get Serper Dev API key](serper.dev/api-key)
+- Get your API key: [Get Serper Dev API key](https://serper.dev/api-key)
 
 #### 3. Composio API Key
 - Utilized for Composio tools in the project.
