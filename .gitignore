@@ -3,9 +3,13 @@ __pycache__/
 __pycache__
 *.py[cod]
 *$py.class
+src/req_engineering_project/.DS_Store
+src/.DS_Store
+
 
 # C extensions
 *.so
+.gitignore
 
 # Distribution / packaging
 .Python
