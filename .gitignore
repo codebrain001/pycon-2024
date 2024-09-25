@@ -5,7 +5,10 @@ __pycache__
 *$py.class
 src/req_engineering_project/.DS_Store
 src/.DS_Store
-
+../.DS_Store
+.DS_Store
+src/.DS_Store
+src/req_engineering_project/.DS_Store
 
 # C extensions
 *.so
