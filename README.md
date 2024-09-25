@@ -48,14 +48,14 @@ Get the following API keys for the project:
 
 #### 5. Langtrace API Key
 - Langtrace is an open-source, external tool that helps you set up observability and evaluations for Large Language Models (LLMs), LLM frameworks, and Vector Databases.
-- Obtain your API key: [Langtrace Quickstart Guide]('https://docs.langtrace.ai/quickstart')
-
+- Obtain your API key: [Langtrace Quickstart Guide](https://docs.langtrace.ai/quickstart)
 
 ## Setup Virtual Environment
 With the repository cloned on your system, access the pycon-2024 directory, which has the following structure:
 ```
-.
+├── Application-welcome-ui.png
 ├── LICENSE
+├── Meeting-notes-001.pdf
 ├── README.md
 ├── req_engineering_project
 ├── requirements.txt
