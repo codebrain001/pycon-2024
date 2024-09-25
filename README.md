@@ -142,7 +142,7 @@ You can run the streamlit application via:
 streamlit run src/req_engineering_project/app.py   
 ```
 
-For this project, we will be utilizing a simulated meeting, [Preview here](Meeting_notes_001.pdf). Feel free to create a simulated meeting for a different use case to test the application.
+For this project, we will be utilizing a simulated meeting, [preview here](Meeting-notes-001.pdf). Feel free to create a simulated meeting for a different use case to test the application.
 
 **The Application Home UI is seen below**
 
